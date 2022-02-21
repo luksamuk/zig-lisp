@@ -28,6 +28,7 @@ pub fn main() !void {
 
     lispvm.table.print();
     lispvm.lists.print();
+    lispvm.print();
 
     std.debug.print("VM Ptr: {*}\n", .{lispvm});
 }
