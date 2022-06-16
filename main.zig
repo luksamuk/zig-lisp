@@ -13,6 +13,7 @@ pub fn main() !void {
     defer allocator.free(vms);
 
     var lispvm = &vms[0];
+    std.debug.print("VM Ptr: {*}\n", .{lispvm});
 
     try lispvm.init();
 
@@ -28,7 +29,6 @@ pub fn main() !void {
 
     lispvm.table.print();
     lispvm.lists.print();
-    lispvm.print();
-
     std.debug.print("VM Ptr: {*}\n", .{lispvm});
+    lispvm.print();
 }
